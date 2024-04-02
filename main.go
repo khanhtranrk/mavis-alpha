@@ -1,36 +1,44 @@
 package main
 
 import (
-	"fmt"
+	"flag"
+	"log"
+	"net/http"
 	"time"
 )
 
+var addr = flag.String("addr", ":8080", "http service address")
+
+func serveMaster(w http.ResponseWriter, r *http.Request) {
+	log.Println(r.URL)
+	if r.URL.Path != "/" {
+		http.Error(w, "Not found", http.StatusNotFound)
+		return
+	}
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	http.ServeFile(w, r, "resource/html/master.html")
+}
+
+func serveAsis(w http.ResponseWriter, r *http.Request) {
+}
+
 func main() {
-  a := make(chan int)
-  b := make(chan int)
-
-  go func() {
-    defer close(a)
-    for i := 0; i < 10; i++ {
-      time.Sleep(2 * time.Second)
-      fmt.Println(i)
-    }
-  }()
-
-  go func() {
-    defer close(b)
-    for i := 0; i < 5; i++ {
-      time.Sleep(1 * time.Second)
-      fmt.Println(i)
-    }
-  }()
-
-  select {
-  case <- a:
-    fmt.Println("Hello world!")
-  case <- b:
-    fmt.Println("Hello world!")
-  }
-
-  fmt.Println("Hello me!")
+	flag.Parse()
+	hub := newHub()
+  broker := NewBroker(hub)
+	go hub.run()
+  go broker.Listen()
+	http.HandleFunc("/", serveMaster)
+	http.HandleFunc("/ds", serveAsis)
+	server := &http.Server{
+		Addr:              *addr,
+		ReadHeaderTimeout: 3 * time.Second,
+	}
+	err := server.ListenAndServe()
+	if err != nil {
+		log.Fatal("ListenAndServe: ", err)
+	}
 }

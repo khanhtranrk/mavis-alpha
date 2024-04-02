@@ -4,5 +4,60 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Broker	internal/broker.go	/^type Broker struct {$/;"	t
+GenerateRelationshipId	justice/key.go	/^func GenerateRelationshipId {$/;"	f
+GenerateSafeKey	justice/key.go	/^func GenerateSafeKey {$/;"	f
+Group	internal/group.go	/^type Group struct {$/;"	t
+Group	internal/handle/group.go	/^type Group struct {$/;"	t
+NewBroker	handle/broker.go	/^func NewBroker(group *Group) *Broker {$/;"	f
+NewBroker	handle/request_broker.go	/^func NewBroker(group *Group) *Broker {$/;"	f
+NewBroker	handle/self_message_queue.go	/^func NewBroker(group *Group) *Broker {$/;"	f
+NewBroker	internal/adaptor/handle/self_message_queue.go	/^func NewBroker(group *Group) *Broker {$/;"	f
+NewBroker	internal/broker.go	/^func NewBroker(group *Group) *Broker {$/;"	f
+NewBroker	internal/handle/self_message_queue.go	/^func NewBroker(group *Group) *Broker {$/;"	f
+NewBroker	internal/self_message_queue.go	/^func NewBroker(group *Group) *Broker {$/;"	f
+NewRelationShipMessageQueue	handle/relationship_message_queue.go	/^func NewRelationShipMessageQueue() *RelationShipMessageQueue {$/;"	f
+NewRelationShipMessageQueue	internal/handle/relationship_message_queue.go	/^func NewRelationShipMessageQueue() *RelationShipMessageQueue {$/;"	f
+NewRelationShipMessageQueue	internal/relationship_message_queue.go	/^func NewRelationShipMessageQueue() *RelationShipMessageQueue {$/;"	f
+RelationShipMessageQueue	handle/relationship_message_queue.go	/^type RelationShipMessageQueue struct {$/;"	t
+RelationShipMessageQueue	internal/handle/relationship_message_queue.go	/^type RelationShipMessageQueue struct {$/;"	t
+RelationShipMessageQueue	internal/relationship_message_queue.go	/^type RelationShipMessageQueue struct {$/;"	t
+RequestBroker	handle/broker.go	/^type RequestBroker struct {$/;"	t
+RequestBroker	handle/request_broker.go	/^type RequestBroker struct {$/;"	t
+RequestBroker	handle/self_message_queue.go	/^type RequestBroker struct {$/;"	t
+RequestMessage	internal/core/domain/request_message.go	/^type RequestMessage struct {$/;"	t
+RequestMessage	internal/domain/request_message.go	/^type RequestMessage struct {$/;"	t
+RequestMessage	internal/request_message.go	/^type RequestMessage struct {$/;"	t
+RespnoseMessage	internal/core/domain/response_message.go	/^type RespnoseMessage struct {$/;"	t
+RespnoseMessage	internal/response_message.go	/^type RespnoseMessage struct {$/;"	t
+Sef	internal/adaptor/handle/self_message_queue.go	/^type Sef struct {$/;"	t
+Sef	internal/handle/self_message_queue.go	/^type Sef struct {$/;"	t
+Sef	internal/self_message_queue.go	/^type Sef struct {$/;"	t
+SendTo	handle/relationship_message_queue.go	/^func (rsmq *RelationShipMessageQueue) SendTo(message) {$/;"	f
+SendTo	internal/handle/relationship_message_queue.go	/^func (rsmq *RelationShipMessageQueue) SendTo(message) {$/;"	f
+SendTo	internal/relationship_message_queue.go	/^func (rsmq *RelationShipMessageQueue) SendTo(message) {$/;"	f
+addr	main.go	/^var addr = flag.String("addr", ":8080", "http service address")$/;"	v
+domain	internal/core/domain/request_message.go	/^package domain$/;"	p
+domain	internal/core/domain/response_message.go	/^package domain$/;"	p
+domain	internal/domain/request_message.go	/^package domain$/;"	p
+domain	internal/request_message.go	/^package domain$/;"	p
+domain	internal/response_message.go	/^package domain$/;"	p
+generateSafeKey	justice/safe_key.go	/^func generateSafeKey {$/;"	f
+handle	handle/broker.go	/^package handle$/;"	p
+handle	handle/request_broker.go	/^package handle$/;"	p
+handle	handle/self_message_queue.go	/^package handle$/;"	p
+handle	internal/adaptor/handle/self_message_queue.go	/^package handle$/;"	p
+handle	internal/handle/self_message_queue.go	/^package handle$/;"	p
+handle	internal/self_message_queue.go	/^package handle$/;"	p
+internal	handle/relationship_message_queue.go	/^package internal$/;"	p
+internal	internal/broker.go	/^package internal$/;"	p
+internal	internal/group.go	/^package internal$/;"	p
+internal	internal/handle/group.go	/^package internal$/;"	p
+internal	internal/handle/relationship_message_queue.go	/^package internal$/;"	p
+internal	internal/relationship_message_queue.go	/^package internal$/;"	p
+justice	justice/key.go	/^package justice$/;"	p
+justice	justice/safe_key.go	/^package justice$/;"	p
 main	main.go	/^func main() {$/;"	f
 main	main.go	/^package main$/;"	p
+serveAsis	main.go	/^func serveAsis(w http.ResponseWriter, r *http.Request) {$/;"	f
+serveMaster	main.go	/^func serveMaster(w http.ResponseWriter, r *http.Request) {$/;"	f
